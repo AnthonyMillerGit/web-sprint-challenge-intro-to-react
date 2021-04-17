@@ -3,12 +3,18 @@ import styled from 'styled-components'
 import Character from './Character'
 
 
+const CardDiv = styled.div`
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+`
+
 const Cards = (props) => {
     
     const {swCharacters} = props
     console.log(swCharacters)
     return (
-        <div>
+        <CardDiv>
             {swCharacters.map(whatever => {
                 return (
                     <Character
@@ -17,7 +23,7 @@ const Cards = (props) => {
                     />
                 )
             })}
-        </div>
+        </CardDiv>
     )
 }
 

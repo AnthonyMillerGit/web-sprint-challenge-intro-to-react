@@ -8,9 +8,9 @@ const Info = props => {
 
     return (
         <div>
-            <p>Name:{}</p>
-            <p>Height:{}</p>
-            <p>Mass:{}</p>
+            <p>Name:{stats.name}</p>
+            <p>Height:{stats.height}</p>
+            <p>Mass:{stats.mass}</p>
         </div>
     )
 }
