@@ -8,6 +8,7 @@ const InfoCard = styled.div`
     color:white;
     margin:1rem;
     padding:2%;
+    opacity:75%;
 
 `
 
