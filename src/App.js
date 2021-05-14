@@ -13,7 +13,7 @@ const App = () => {
     axios
     .get('https://swapi.dev/api/people')
     .then(res => {
-      console.log(res.data)
+      // console.log(res.data)
       setswCharacters(res.data)
     })
     .catch(error => {
