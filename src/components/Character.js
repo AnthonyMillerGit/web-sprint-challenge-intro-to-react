@@ -4,15 +4,17 @@ import styled from 'styled-components'
 import Info from '../components/Info'
 
 const CharDiv = styled.div`
-    border:1px dashed black;
+    border:3px solid black;
     width:25%;
     margin:1rem;
     padding:1rem;
 `
+
 const HelloWorld = styled.h1`
     border:1px solid purple;
     background-color:cadetblue;
 `
+
 const Birth = styled.p`
     background-color:#fad586;
     &:hover {
@@ -28,8 +30,8 @@ const Character = (props) => {
 
     return (
         <CharDiv>
-            <HelloWorld>Hello World i am {person.name} </HelloWorld>
-            <Birth>i was born on {person.birth_year}</Birth>
+            <HelloWorld>Hello World I Am {person.name} </HelloWorld>
+            <Birth>I Was Born On {person.birth_year}</Birth>
                 <Info stats={person}/>
         </CharDiv>
     )
