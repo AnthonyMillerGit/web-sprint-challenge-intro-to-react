@@ -21,7 +21,16 @@ const Birth = styled.p`
         background-color:#96bb7c;
     }
 `
-
+const EmojiMaker = props => (
+    <span
+    className="emoji"
+    role="img"
+    aria-label={props.label ? props.label : ""}
+    aria-hidden={props.label ? "false" : "true"}
+  >
+    {props.symbol}
+  </span>
+)
 
 
 const Character = (props) => {
@@ -30,8 +39,8 @@ const Character = (props) => {
 
     return (
         <CharDiv>
-            <HelloWorld>Hello World I Am {person.name} </HelloWorld>
-            <Birth>I Was Born On {person.birth_year}</Birth>
+            <HelloWorld>Hello World I Am {person.name} <EmojiMaker label="galaxy" symbol="🌌"/></HelloWorld>
+            <Birth>I Was Born On {person.birth_year}<EmojiMaker label="birthday" symbol="🎂"/></Birth>
                 <Info stats={person}/>
         </CharDiv>
     )

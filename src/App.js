@@ -3,6 +3,20 @@ import './App.css';
 import axios from 'axios'
 import Cards from './components/Cards'
 
+
+const EmojiMaker = props => (
+  <span
+  className="emoji"
+  role="img"
+  aria-label={props.label ? props.label : ""}
+  aria-hidden={props.label ? "false" : "true"}
+>
+  {props.symbol}
+</span>
+)
+
+
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -27,7 +41,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header"><EmojiMaker label="Star" symbol="⭐"/>Characters<EmojiMaker label="Star" symbol="⭐"/></h1>
       <Cards swCharacters={swCharacters}></Cards>
     </div>
   );
